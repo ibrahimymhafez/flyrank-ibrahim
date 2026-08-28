@@ -1,0 +1,39 @@
+{
+  "lane": "Content Opportunity Scoring (Content Retention)",
+  "label": "needs_refresh = (clicks = 0 AND impressions > 0)",
+  "training_split": "month=2026-03",
+  "test_split": "June 2026 final-month sample (_sample)",
+  "requested_features": ["impressions", "position", "is_weekend"],
+  "executed_w05_features": ["impressions", "ctr", "is_weekend"],
+  "model": {
+    "name": "Random Forest classifier",
+    "n_estimators": 100,
+    "max_depth": 8,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "archived_w05_metrics": {
+    "baseline": {
+      "precision": 0.1289,
+      "recall": 0.0044,
+      "accuracy": 0.6189
+    },
+    "random_forest": {
+      "precision": 0.9997,
+      "recall": 1.0,
+      "accuracy": 0.9999
+    }
+  },
+  "validation_audit": {
+    "random_split_precision": 0.9204,
+    "time_aware_precision": 0.9567
+  },
+  "playbook": {
+    "immediate_refresh": {"probability": "> 0.65", "reason": "HIGH_VOL_LOW_CTR_PAGE_1"},
+    "metadata_tweak": {"probability": "0.45-0.65 inclusive", "reason": "BORDERLINE_POSITION_DROP"},
+    "no_action": {"probability": "< 0.45", "reason": "HEALTHY_METRICS"}
+  },
+  "archived_playbook_review_count": 109,
+  "archived_playbook_scored_pages": 5000,
+  "status": "Archived notebook evidence; rerun with the requested position feature before treating metrics as a final production benchmark."
+}
