@@ -1,7 +1,7 @@
 
 # Content Opportunity Scoring: Finding Search Decay Before the Refresh Queue
 
-- **Author:** Ibrahim Yaser
+- **Author:** Ibrahim Hafez
 - **Lane:** Content Retention
 - **Repo:** [GitHub repository placeholder](https://github.com/ibrahimymhafez/flyrank-ibrahim)
 - **Date:** 2026-08-28
@@ -72,12 +72,8 @@ The committed public-safe receipt is [`work/outputs/capstone_metrics.json`](outp
 
 Notebook links:
 
-- [Capstone notebook](notebooks/capstone.ipynb)
-- [Data contract notebook](notebooks/w03_data_contract.ipynb)
-- [Baseline notebook](notebooks/w04_baseline_score.ipynb)
-- [Model notebook](notebooks/w05_model.ipynb)
-- [Validation audit notebook](notebooks/w06_validation_audit.ipynb)
-- [Action playbook notebook](notebooks/w07_action_playbook.ipynb)
+- [Capstone notebook](https://github.com/ibrahimymhafez/flyrank-ibrahim/tree/main/work/notebooks)
+- [Model notebook](https://github.com/ibrahimymhafez/flyrank-ibrahim/blob/main/work/notebooks/w05_model.ipynb)
 
 To reproduce the warehouse query, request Hugging Face access, store the read token as `HF_TOKEN`, and run the capstone notebook from top to bottom. Do not commit the token or warehouse data. The notebook's requested feature contract and the archived Week 5 feature list are both printed so a rerun can confirm that metrics correspond to the intended experiment.
 
@@ -87,7 +83,7 @@ The public-ready page is [`docs/index.html`](../docs/index.html). Enable GitHub 
 
 ## 9. Acknowledgments & data credit
 
-[Built on the FlyRank ML Internship dataset](https://flyrank.ai).
+[Built on the FlyRank ML Internship dataset on HuggingFace](https://huggingface.co/datasets/FlyRank/internship-warehouse).
 
 
 ## 0. Abstract
